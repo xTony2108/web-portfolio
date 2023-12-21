@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-raleway;
+  }
+}
+
+@layer components {
+  .imgBorder::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    height: 140%;
+    width: 5rem;
+    background: linear-gradient(#203ada, #f52691);
+    animation: borderAnim 4s linear infinite;
+  }
+  .imgBorder::after {
+    content: "";
+    position: absolute;
+    background: white;
+    inset: 6px;
+    border-radius: 9999px;
+  }
+  /* .bgImg {
+    background-image: url("./assets/images/whiteBg.jpg");
+    background-size: cover;
+  } */
+}
+
+@keyframes borderAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
