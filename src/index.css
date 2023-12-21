@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-raleway;
+  }
+}
+
+@layer components {
+  .bgImg {
+    background: "./assets/images/bg.mp4";
+  }
+  .imgBorder::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    height: 140%;
+    width: 10rem;
+    background: linear-gradient(#00ccff, #d500f9);
+    animation: borderAnim 4s linear infinite;
+  }
+  .imgBorder::after {
+    content: "";
+    position: absolute;
+    background: white;
+    inset: 6px;
+    border-radius: 9999px;
+  }
+}
+
+@keyframes borderAnim {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
