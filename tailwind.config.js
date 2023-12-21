@@ -17,7 +17,7 @@ export default {
       },
       padding: {
         heroPX: "80px",
-        heroPY: "80px",
+        sectionPY: "80px",
       },
     },
   },

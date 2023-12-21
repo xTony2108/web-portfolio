@@ -26,7 +26,7 @@ export const Hero = () => {
   return (
     <>
       <header className="bgImg">
-        <div className="flex justify-center h-[calc(100vh-92px)] py-heroPY max-w-sectionWidth m-auto">
+        <div className="flex justify-center h-[calc(100vh-92px)] py-sectionPY max-w-sectionWidth m-auto">
           <div className="flex-1 w-full">
             <div className="w-full">
               <h1 className="font-black text-8xl leading-tight">
