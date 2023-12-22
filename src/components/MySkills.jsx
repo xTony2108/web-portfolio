@@ -3,19 +3,19 @@ import { SkillCard } from "./SkillCard";
 
 export const MySkills = () => {
   return (
-    <div className="bg-[#F4E2C9] py-sectionPY">
+    <div className="bg-[#F4E2C9] py-heroLg 2xl:py-heroXl">
       <div className=" flex items-center justify-center gap-4">
-        <h3 className="font-black text-6xl text-center text-[#101118]">
+        <h3 className="font-black text-center text-[#101118] text-3xl lg:text-5xl xl:text-6xl">
           Competenze
         </h3>
         <FontAwesomeIcon
           icon="fa-solid fa-code"
-          size="4x"
+          className="text-3xl lg:text-5xl xl:text-6xl"
           style={{ color: "#101118" }}
         />
       </div>
-      <div className="max-w-sectionWidth m-auto">
-        <div className="flex justify-center flex-wrap pt-24 gap-6">
+      <div className="m-auto max-w-sm sm:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+        <div className="flex gap-6 sm:justify-center sm:flex-wrap overflow-auto pt-24 sm:gap-3 lg:gap-6">
           <SkillCard
             iconName={"HTML"}
             icon={"fa-brands fa-html5"}
@@ -52,7 +52,7 @@ export const MySkills = () => {
             fourthStar={{ star: "fa-regular fa-star", color: false }}
             fifthStar={{ star: "fa-regular fa-star", color: false }}
           />
-          <div className="flex justify-center items-center overflow-hidden flex-col relative z-20 bg-emerald-400 p-6 rounded-2xl hover:cardBorder basis-[calc(33.333333%-24px)]">
+          <div className="min-w-60 flex justify-center items-center overflow-hidden flex-col relative z-20 sm:py-20 bg-emerald-400 p-3 sm:p-6 rounded-2xl hover:cardBorder sm:basis-[calc(50%-12px)] lg:basis-[calc(33.333333%-24px)]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -61,6 +61,7 @@ export const MySkills = () => {
               height="166.68"
               fill="rgb(16, 17, 24)"
               viewBox="0 0 50 50"
+              className="w-24 sm:w-60"
             >
               <path d="M45,4H5C4.447,4,4,4.448,4,5v40c0,0.552,0.447,1,1,1h40c0.553,0,1-0.448,1-1V5C46,4.448,45.553,4,45,4z M29,26.445h-5V42h-4	V26.445h-5V23h14V26.445z M30.121,41.112v-4.158c0,0,2.271,1.712,4.996,1.712c2.725,0,2.62-1.782,2.62-2.026	c0-2.586-7.721-2.586-7.721-8.315c0-7.791,11.25-4.717,11.25-4.717l-0.14,3.704c0,0-1.887-1.258-4.018-1.258s-2.9,1.013-2.9,2.096	c0,2.795,7.791,2.516,7.791,8.141C42,44.955,30.121,41.112,30.121,41.112z"></path>
             </svg>

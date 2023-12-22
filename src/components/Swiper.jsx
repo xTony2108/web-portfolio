@@ -33,10 +33,11 @@ export const Carousel = () => {
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView={2}
+          slidesPerView={1}
           pagination={{ el: ".pagination", clickable: true }}
           navigation={{ nextEl: ".next", prevEl: ".prev" }}
           modules={[EffectCoverflow, Pagination, Navigation]}
+          coverflowEffect={{ rotate: 0, stretch: 0, depth: 100, modifier: 2.5 }}
         >
           <SwiperSlide>
             <a
@@ -45,13 +46,6 @@ export const Carousel = () => {
             >
               <img src={gympro} alt="Gympro" />
             </a>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="flex items-center justify-center h-[400px]">
-              <a className="text-red-900 font-black text-6xl">
-                Work in progress
-              </a>
-            </div>
           </SwiperSlide>
           <div className="pagination flex justify-center py-6 gap-2"></div>
         </Swiper>

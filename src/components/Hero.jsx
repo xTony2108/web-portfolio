@@ -26,16 +26,18 @@ export const Hero = () => {
   return (
     <>
       <header className="relative">
-        <div className="flex justify-center min-h-[calc(100svh-58px)] py-heroPY max-w-sectionWidth m-auto">
+        <div className="flex justify-center m-auto pb-20 pt-10 max-w-sm sm:max-w-2xl sm:pb-40 sm:pt-20 lg:max-w-4xl xl:min-h-[calc(100svh-58px)] xl:py-heroXl xl:max-w-6xl">
           <div className="flex-1 w-full">
             <div className="w-full">
-              <h1 className="font-black text-8xl">
+              <h1 className="font-black text-4xl lg:text-6xl xl:text-8xl">
                 <span>
                   Ciao,
                   <br /> sono <span className="text-[#6A0DAD]">Antonino.</span>
                 </span>
               </h1>
-              <p className="text-2xl font-bold leading-8 mt-4">{writer}</p>
+              <p className="text-sm font-bold lg:leading-8 lg:mt-4 sm:text-base lg:text-xl xl:text-2xl">
+                {writer}
+              </p>
             </div>
             <div className="w-full flex items-start mt-4 gap-4">
               <button className="bg-[#6A0DAD] text-white min-w-32 h-9 rounded-2xl font-semibold shadow-lg self-start">
@@ -70,8 +72,8 @@ export const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="flex-1 flex justify-center items-center">
-            <div className="p-4 w-96 h-96 relative z-20 imgBorder overflow-hidden flex items-center justify-center rounded-full">
+          <div className="flex-1 hidden justify-center items-center sm:flex">
+            <div className="p-4 hidden relative z-20 imgBorder overflow-hidden sm:flex items-center justify-center rounded-full xl:w-96 xl:h-96 lg:w-72 lg:h-72 sm:w-56 sm:h-56">
               <img
                 src={foto}
                 className="w-full h-full rounded-full relative z-20"

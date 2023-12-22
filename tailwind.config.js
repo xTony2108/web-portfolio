@@ -12,13 +12,9 @@ export default {
       fontFamily: {
         raleway: ["Raleway", "sans-serif"],
       },
-      maxWidth: {
-        sectionWidth: "1480px",
-      },
       padding: {
-        sectionPX: "80px",
-        sectionPY: "80px",
-        heroPY: "128px",
+        heroXl: "128px",
+        heroLg: "80px",
       },
     },
   },
