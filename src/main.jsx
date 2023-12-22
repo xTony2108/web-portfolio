@@ -4,7 +4,12 @@ import { App } from "./App";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faCode, faStar } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCaretLeft,
+  faCaretRight,
+  faCode,
+  faStar,
+} from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 
 import {
@@ -29,7 +34,9 @@ library.add(
   faReact,
   faNode,
   faStar,
-  regularStar
+  regularStar,
+  faCaretLeft,
+  faCaretRight
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(
