@@ -25,10 +25,43 @@
     inset: 6px;
     border-radius: 9999px;
   }
-  /* .bgImg {
-    background-image: url("./assets/images/whiteBg.jpg");
-    background-size: cover;
-  } */
+
+  .cardBorder::before {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    height: 15rem;
+    width: 140%;
+    background: black;
+    animation: borderAnim 4s linear infinite;
+  }
+  .cardBorder::after {
+    content: "";
+    position: absolute;
+    background: rgb(52, 211, 153);
+    inset: 6px;
+    z-index: -1;
+    border-radius: 12px;
+  }
+  .custom-shape-divider-bottom-1703247122 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+  }
+
+  .custom-shape-divider-bottom-1703247122 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
+
+  .custom-shape-divider-bottom-1703247122 .shape-fill {
+    fill: #101118;
+  }
 }
 
 @keyframes borderAnim {

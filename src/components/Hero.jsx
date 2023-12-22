@@ -9,7 +9,7 @@ export const Hero = () => {
   const text = `Sono un junior full stack developer. Esplora il mio portfolio per vedere cosa posso fare e come ho affrontato sfide uniche nel mondo dello sviluppo web.`;
 
   const maxLength = text.length;
-  const speed = 5000 / maxLength;
+  const speed = 3000 / maxLength;
 
   useEffect(() => {
     const write = setInterval(() => {
@@ -25,11 +25,11 @@ export const Hero = () => {
 
   return (
     <>
-      <header className="bgImg">
-        <div className="flex justify-center h-[calc(100vh-92px)] py-sectionPY max-w-sectionWidth m-auto">
+      <header>
+        <div className="flex justify-center min-h-[calc(100svh-58px)] py-heroPY max-w-sectionWidth m-auto">
           <div className="flex-1 w-full">
             <div className="w-full">
-              <h1 className="font-black text-8xl leading-tight">
+              <h1 className="font-black text-8xl">
                 <span>
                   Ciao,
                   <br /> sono <span className="text-[#6A0DAD]">Antonino.</span>
@@ -47,17 +47,25 @@ export const Hero = () => {
               >
                 <FontAwesomeIcon
                   icon="fa-brands fa-linkedin"
-                  size="2xl"
                   cursor={"pointer"}
-                  style={{ color: "#6a0dad" }}
+                  style={{
+                    display: "block",
+                    color: "#6a0dad",
+                    width: "36px",
+                    height: "36px",
+                  }}
                 />
               </a>
               <a href="https://github.com/xTony2108" target="_blank">
                 <FontAwesomeIcon
                   icon="fa-brands fa-github"
-                  size="2xl"
                   cursor={"pointer"}
-                  style={{ color: "#6a0dad" }}
+                  style={{
+                    display: "block",
+                    color: "#6a0dad",
+                    width: "36px",
+                    height: "36px",
+                  }}
                 />
               </a>
             </div>
@@ -69,6 +77,19 @@ export const Hero = () => {
                 className="w-full h-full rounded-full relative z-20"
               />
             </div>
+          </div>
+          <div class="custom-shape-divider-bottom-1703247122">
+            <svg
+              data-name="Layer 1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1200 120"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                class="shape-fill"
+              ></path>
+            </svg>
           </div>
         </div>
       </header>
