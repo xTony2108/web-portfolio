@@ -30,8 +30,8 @@
     content: "";
     position: absolute;
     z-index: -2;
-    height: 15rem;
-    width: 140%;
+    height: 140%;
+    width: 5rem;
     background: black;
     animation: borderAnim 4s linear infinite;
   }
@@ -43,6 +43,7 @@
     z-index: -1;
     border-radius: 12px;
   }
+
   .custom-shape-divider-bottom-1703247122 {
     position: absolute;
     bottom: -1px;
@@ -56,11 +57,30 @@
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 150px;
+    height: 50px;
   }
 
   .custom-shape-divider-bottom-1703247122 .shape-fill {
     fill: #101118;
+  }
+
+  @media (max-height: 580px) {
+    .custom-shape-divider-bottom-1703247122 svg {
+      height: 100px;
+    }
+  }
+  @media (min-width: 640px) {
+    .custom-shape-divider-bottom-1703247122 svg {
+      height: 100px;
+    }
+    .cardBorder::before {
+      width: 15rem;
+    }
+  }
+  @media (min-width: 1560px) {
+    .custom-shape-divider-bottom-1703247122 svg {
+      height: 150px;
+    }
   }
 }
 

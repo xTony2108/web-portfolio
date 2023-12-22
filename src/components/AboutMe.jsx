@@ -2,10 +2,12 @@ import cv from "../assets/images/Alampi_Antonino_CV.pdf";
 
 export const AboutMe = () => {
   return (
-    <div className="bg-[#101118] py-sectionPY">
-      <h2 className="text-6xl text-white text-center font-black">Chi sono</h2>
-      <div className="max-w-sectionWidth m-auto pt-6 flex flex-col items-center">
-        <p className="text-white text-xl font-bold pb-8">
+    <div className="bg-[#101118] py-heroLg 2xl:py-heroXl">
+      <h2 className=" text-white text-center font-black text-3xl lg:text-5xl xl:text-6xl">
+        Chi sono
+      </h2>
+      <div className="m-auto pt-6 flex flex-col items-center max-w-sm sm:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+        <p className="text-white font-bold text-sm pb-8 sm:text-base xl:text-xl">
           Mi chiamo Antonino Alampi sono nato e cresciuto a Reggio Calabria il
           21/08/1999. Sin da piccolo ho avuto una forte passione per
           l'informatica osservando i miei fratelli utilizzare computer e
