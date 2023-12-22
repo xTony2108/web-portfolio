@@ -16,8 +16,9 @@ export default {
         sectionWidth: "1480px",
       },
       padding: {
-        heroPX: "80px",
+        sectionPX: "80px",
         sectionPY: "80px",
+        heroPY: "128px",
       },
     },
   },
