@@ -26,7 +26,7 @@ export const Hero = () => {
   return (
     <>
       <header className="relative">
-        <div className="flex justify-center m-auto pb-20 pt-10 max-w-sm sm:max-w-2xl sm:pb-40 sm:pt-20 lg:max-w-4xl xl:min-h-[calc(100svh-58px)] xl:py-heroXl xl:max-w-6xl">
+        <div className="flex flex-col justify-center px-4 m-auto pb-20 pt-10 max-w-sm sm:max-w-2xl sm:flex-row sm:pb-40 sm:pt-20 lg:max-w-4xl xl:min-h-[calc(100svh-58px)] xl:py-heroXl xl:max-w-6xl sm:px-0">
           <div className="flex-1 w-full">
             <div className="w-full">
               <h1 className="font-black text-4xl lg:text-6xl xl:text-8xl">
@@ -72,8 +72,8 @@ export const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="flex-1 hidden justify-center items-center sm:flex">
-            <div className="p-4 hidden relative z-20 imgBorder overflow-hidden sm:flex items-center justify-center rounded-full xl:w-96 xl:h-96 lg:w-72 lg:h-72 sm:w-56 sm:h-56">
+          <div className="flex-1 justify-center items-center flex mt-10 sm:mt-0">
+            <div className="w-48 h-48 p-4 relative z-20 imgBorder overflow-hidden flex items-center justify-center rounded-full xl:w-96 xl:h-96 lg:w-72 lg:h-72 sm:w-56 sm:h-56">
               <img
                 src={foto}
                 className="w-full h-full rounded-full relative z-20"
