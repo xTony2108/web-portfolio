@@ -2,7 +2,7 @@ import cv from "../assets/images/Alampi_Antonino_CV.pdf";
 
 export const AboutMe = () => {
   return (
-    <div className="bg-[#101118] py-heroLg 2xl:py-heroXl">
+    <div className="bg-[#101118] px-4 py-heroLg 2xl:py-heroXl sm:px-0">
       <h2 className=" text-white text-center font-black text-3xl lg:text-5xl xl:text-6xl">
         Chi sono
       </h2>
@@ -23,18 +23,18 @@ export const AboutMe = () => {
           programmazione Full Stack così da aiutarmi trasformare le mie passioni
           in lavoro.
         </p>
-        <div className="flex gap-8">
+        <div className="flex gap-4 justify-center w-full sm:gap-8 sm:w-fit">
           <a
             href="https://www.credential.net/041e8eaa-4b45-4764-b874-7a718471c947"
             target="_blank"
-            className="min-w-32 h-9 bg-[#F52691] px-6 flex items-center justify-center font-semibold shadow-lg text-white rounded-2xl"
+            className="text-xs w-fit px-4 h-9 bg-[#F52691] flex items-center justify-center text-center font-semibold shadow-lg text-white rounded-2xl sm:text-base"
           >
             Visualizza certificato
           </a>
           <a
             href={cv}
             target="_blank"
-            className="min-w-32 h-9 bg-[#F52691] px-6 flex items-center justify-center font-semibold shadow-lg text-white rounded-2xl"
+            className="text-xs w-fit px-4 h-9 bg-[#F52691] flex items-center justify-center text-center font-semibold shadow-lg text-white rounded-2xl sm:text-base"
           >
             Visualizza CV
           </a>
