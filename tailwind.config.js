@@ -13,7 +13,7 @@ export default {
         raleway: ["Raleway", "sans-serif"],
       },
       padding: {
-        heroXl: "128px",
+        heroXl: "186px",
         heroLg: "80px",
       },
       screens: {
