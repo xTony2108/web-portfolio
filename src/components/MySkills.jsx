@@ -16,8 +16,8 @@ export const MySkills = ({ mySkillsRef }) => {
           style={{ color: "#101118" }}
         />
       </div>
-      <div className="sm:m-auto sm:max-w-xl lg:max-w-4xl xl:max-w-6xl">
-        <div className="flex px-4 pb-4 gap-6 sm:px-0 sm:justify-center sm:flex-wrap overflow-auto pt-24 sm:pb-0 sm:gap-3 lg:gap-6">
+      <div className="sm:m-auto max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+        <div className="flex px-5 pb-4 gap-6 sm:justify-center sm:flex-wrap overflow-auto pt-24 sm:pb-0 sm:gap-3 lg:gap-6">
           <SkillCard
             iconName={"HTML"}
             icon={"fa-brands fa-html5"}
@@ -54,7 +54,7 @@ export const MySkills = ({ mySkillsRef }) => {
             fourthStar={{ star: "fa-regular fa-star", color: false }}
             fifthStar={{ star: "fa-regular fa-star", color: false }}
           />
-          <div className="min-w-60 flex justify-center items-center overflow-hidden flex-col relative z-20 sm:py-20 bg-emerald-400 p-3 sm:p-6 rounded-2xl hover:cardBorder sm:basis-[calc(50%-6px)] lg:basis-[calc(33.333333%-16px)]">
+          <div className="min-w-60 flex justify-center items-center overflow-hidden flex-col relative z-20 sm:py-20 bg-emerald-400 p-3 sm:p-6 rounded-2xl hover:cardBorder sm:basis-[calc(50%-6px)] lg:basis-[calc(33.333333%-16px)] 2xl:basis-[calc(25%-18px)]">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
