@@ -16,6 +16,11 @@ export default {
         heroXl: "128px",
         heroLg: "80px",
       },
+      screens: {
+        tall: { raw: "(min-height: 678px) and (max-width: 640px)" },
+        tallsm: { raw: "(max-height: 600px) and (max-width: 768px)" },
+        tallmd: { raw: "(min-height: 915px) and (max-width: 1024px)" },
+      },
     },
   },
   plugins: [],

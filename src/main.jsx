@@ -9,6 +9,7 @@ import {
   faCaretRight,
   faCode,
   faStar,
+  faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 
@@ -36,7 +37,8 @@ library.add(
   faStar,
   regularStar,
   faCaretLeft,
-  faCaretRight
+  faCaretRight,
+  faArrowUp
 );
 
 ReactDOM.createRoot(document.getElementById("root")).render(

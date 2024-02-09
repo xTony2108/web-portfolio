@@ -73,11 +73,8 @@
     .custom-shape-divider-bottom-1703247122 svg {
       height: 100px;
     }
-    .cardBorder::before {
-      width: 15rem;
-    }
   }
-  @media (min-width: 1560px) {
+  @media (min-width: 768px) {
     .custom-shape-divider-bottom-1703247122 svg {
       height: 150px;
     }
