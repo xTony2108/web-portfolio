@@ -8,10 +8,8 @@ import {
   faCaretLeft,
   faCaretRight,
   faCode,
-  faStar,
   faArrowUp,
 } from "@fortawesome/free-solid-svg-icons";
-import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 
 import {
   faLinkedin,
@@ -34,8 +32,6 @@ library.add(
   faJs,
   faReact,
   faNode,
-  faStar,
-  regularStar,
   faCaretLeft,
   faCaretRight,
   faArrowUp
