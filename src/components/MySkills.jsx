@@ -1,9 +1,14 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SkillCard } from "./SkillCard";
 
-export const MySkills = () => {
+export const MySkills = ({ mySkillsRef }) => {
+  const ref = mySkillsRef;
+
   return (
-    <div className="bg-[#F4E2C9] py-heroLg 2xl:py-heroXl px-4 sm:px-0">
+    <div
+      className="bg-[#F4E2C9] py-heroLg 2xl:py-heroXl px-4 sm:px-0"
+      ref={ref}
+    >
       <div className=" flex items-center justify-center gap-4">
         <h3 className="font-black text-center text-[#101118] text-3xl lg:text-5xl xl:text-6xl">
           Competenze

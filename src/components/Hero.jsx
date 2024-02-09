@@ -1,15 +1,43 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import foto from "../assets/images/foto.png";
+import { clsx } from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Hero = () => {
+export const Hero = ({ myProjectsRef }) => {
   const [writer, setWriter] = useState("");
   const [count, setCount] = useState(0);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  const heroRef = useRef();
+
+  const myProjects = myProjectsRef;
 
   const text = `Sono un junior full stack developer. Esplora il mio portfolio per vedere cosa posso fare e come ho affrontato sfide uniche nel mondo dello sviluppo web.`;
 
   const maxLength = text.length;
   const speed = 3000 / maxLength;
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsIntersecting(entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+      }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+    return () => {
+      if (heroRef.current) {
+        observer.unobserve(heroRef.current);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const write = setInterval(() => {
@@ -25,7 +53,7 @@ export const Hero = () => {
 
   return (
     <>
-      <header className="relative">
+      <header className="relative" ref={heroRef}>
         <div className="flex flex-col justify-center px-4 m-auto pb-20 pt-10 max-w-sm sm:max-w-2xl sm:flex-row sm:pb-40 sm:pt-20 lg:max-w-4xl xl:min-h-[calc(100svh-58px)] xl:py-heroXl xl:max-w-6xl sm:px-0">
           <div className="flex-1 w-full">
             <div className="w-full">
@@ -40,8 +68,14 @@ export const Hero = () => {
               </p>
             </div>
             <div className="w-full flex items-start mt-4 gap-4">
-              <button className="bg-[#6A0DAD] text-white min-w-32 h-9 rounded-2xl font-semibold shadow-lg self-start">
-                Chi sono
+              <button
+                onClick={() =>
+                  myProjects &&
+                  myProjects?.current?.scrollIntoView({ behavior: "smooth" })
+                }
+                className="bg-[#6A0DAD] text-white min-w-32 h-9 rounded-2xl font-semibold shadow-lg self-start"
+              >
+                Progetti
               </button>
               <a
                 href="https://www.linkedin.com/in/antonino-alampi-002b62280/"
@@ -94,6 +128,26 @@ export const Hero = () => {
             ></path>
           </svg>
         </div>
+        <button
+          className={clsx(
+            "fixed content-none right-40 bottom-20 bg-[#6a0dad] p-2 rounded-md",
+            isIntersecting && "hidden"
+          )}
+          onClick={() =>
+            heroRef && heroRef?.current?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          <FontAwesomeIcon
+            icon="fa-solid fa-arrow-up"
+            cursor={"pointer"}
+            style={{
+              display: "block",
+              color: "white",
+              width: "32px",
+              height: "32px",
+            }}
+          />
+        </button>
       </header>
     </>
   );
