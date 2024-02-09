@@ -4,8 +4,8 @@ import { Carousel } from "./Swiper";
 export const MyProjects = ({ myProjectsRef }) => {
   return (
     <>
-      <div className="py-heroLg 2xl:py-heroXl px-4 sm:px-0" ref={myProjectsRef}>
-        <div className="m-auto max-w-sm sm:max-w-xl lg:max-w-4xl xl:max-w-6xl">
+      <div className="py-heroLg 2xl:py-heroXl px-5" ref={myProjectsRef}>
+        <div className="m-auto max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <div className="flex justify-around items-center">
             <button className="prev disabled:opacity-30">
               <FontAwesomeIcon
