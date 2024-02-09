@@ -11,7 +11,7 @@ export const SkillCard = ({
   color,
 }) => {
   return (
-    <div className="min-w-60 flex justify-center items-center py-10 sm:py-20 overflow-hidden flex-col relative z-20 bg-emerald-400 p-6 rounded-2xl hover:cardBorder sm:basis-[calc(50%-12px)] lg:basis-[calc(33.333333%-24px)]">
+    <div className="min-w-60 flex justify-center items-center py-10 sm:py-20 overflow-hidden flex-col relative z-20 bg-emerald-400 p-6 rounded-2xl hover:cardBorder sm:basis-[calc(50%-6px)] lg:basis-[calc(33.333333%-16px)]">
       <FontAwesomeIcon
         icon={icon}
         size="10x"
