@@ -130,7 +130,7 @@ export const Hero = ({ myProjectsRef }) => {
         </div>
         <button
           className={clsx(
-            "fixed content-none right-40 bottom-20 bg-[#6a0dad] p-2 rounded-md",
+            "fixed p-2 rounded-lg content-none right-5 bottom-20 bg-[#6a0dad] z-50 sm:p-4 sm:rounded-2xl",
             isIntersecting && "hidden"
           )}
           onClick={() =>
@@ -143,8 +143,8 @@ export const Hero = ({ myProjectsRef }) => {
             style={{
               display: "block",
               color: "white",
-              width: "32px",
-              height: "32px",
+              width: "18px",
+              height: "18px",
             }}
           />
         </button>

@@ -10,9 +10,9 @@ export const Navbar = ({ aboutMeRef, mySkillsRef, myProjectsRef }) => {
           <span className="block h-full text-black font-bold text-xs sm:text-base">
             Antonino Alampi
           </span>
-          <div className="flex">
+          <div className="flex gap-3 sm:gap-12">
             <button
-              className="block ml-6 sm:ml-12 text-black hover:translate-y-0.5 font-bold text-xs sm:text-base"
+              className="block text-black hover:translate-y-0.5 font-bold text-xs sm:text-base"
               onClick={() =>
                 aboutMe &&
                 aboutMe?.current?.scrollIntoView({ behavior: "smooth" })
@@ -21,7 +21,7 @@ export const Navbar = ({ aboutMeRef, mySkillsRef, myProjectsRef }) => {
               Chi sono
             </button>
             <button
-              className="block ml-6 sm:ml-12 text-black hover:translate-y-0.5 font-bold text-xs sm:text-base"
+              className="block text-black hover:translate-y-0.5 font-bold text-xs sm:text-base"
               onClick={() =>
                 mySkills &&
                 mySkills?.current?.scrollIntoView({ behavior: "smooth" })
@@ -30,7 +30,7 @@ export const Navbar = ({ aboutMeRef, mySkillsRef, myProjectsRef }) => {
               Competenze
             </button>
             <button
-              className="block ml-6 sm:ml-12 text-black hover:translate-y-0.5 font-bold text-xs sm:text-base"
+              className="block text-black hover:translate-y-0.5 font-bold text-xs sm:text-base"
               onClick={() =>
                 myProjects &&
                 myProjects?.current?.scrollIntoView({ behavior: "smooth" })
