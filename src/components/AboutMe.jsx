@@ -1,9 +1,12 @@
 import cv from "../assets/images/Alampi_Antonino_CV.pdf";
 
-export const AboutMe = () => {
+export const AboutMe = ({ aboutMeRef }) => {
   return (
-    <div className="bg-[#101118] px-4 py-heroLg 2xl:py-heroXl sm:px-0">
-      <h2 className=" text-white text-center font-black text-3xl lg:text-5xl xl:text-6xl">
+    <div
+      className="bg-[#101118] px-4 py-heroLg 2xl:py-heroXl sm:px-0"
+      ref={aboutMeRef}
+    >
+      <h2 className="text-white text-center font-black text-3xl lg:text-5xl xl:text-6xl">
         Chi sono
       </h2>
       <div className="m-auto pt-6 flex flex-col items-center max-w-sm sm:max-w-xl lg:max-w-4xl xl:max-w-6xl">
