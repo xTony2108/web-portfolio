@@ -5,8 +5,8 @@ export const Navbar = ({ aboutMeRef, mySkillsRef, myProjectsRef }) => {
 
   return (
     <>
-      <nav className="fixed bg-white top-0 left-0 right-0 z-50 py-4 border-b-2 border-black px-5">
-        <div className="flex justify-between items-center m-auto max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+      <nav className="fixed bg-white top-0 left-0 right-0 z-50 py-4 border-b-2 border-black">
+        <div className="flex justify-between items-center m-auto px-5 max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <span className="sm:block h-full text-black font-bold text-xs hidden sm:text-base">
             Antonino Alampi
           </span>
