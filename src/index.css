@@ -63,6 +63,13 @@
   .custom-shape-divider-bottom-1703247122 .shape-fill {
     fill: #101118;
   }
+  .hideScrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hideScrollbar::-webkit-scrollbar {
+    display: none;
+  }
 
   @media (max-height: 580px) {
     .custom-shape-divider-bottom-1703247122 svg {

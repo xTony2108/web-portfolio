@@ -1,7 +1,10 @@
-export const Navbar = ({ aboutMeRef, mySkillsRef, myProjectsRef }) => {
-  const aboutMe = aboutMeRef;
-  const mySkills = mySkillsRef;
-  const myProjects = myProjectsRef;
+import { forwardRef } from "react";
+
+export const Navbar = forwardRef((_, ref) => {
+  console.log(ref);
+  const aboutMe = ref.aboutMeRef;
+  const mySkills = ref.mySkillsRef;
+  const myProjects = ref.myProjectsRef;
 
   return (
     <>
@@ -46,4 +49,4 @@ export const Navbar = ({ aboutMeRef, mySkillsRef, myProjectsRef }) => {
       </nav>
     </>
   );
-};
+});

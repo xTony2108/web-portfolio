@@ -13,14 +13,16 @@ export const Home = () => {
   return (
     <>
       <Navbar
-        aboutMeRef={aboutMeRef}
-        mySkillsRef={mySkillsRef}
-        myProjectsRef={myProjectsRef}
+        ref={{
+          aboutMeRef,
+          mySkillsRef,
+          myProjectsRef,
+        }}
       />
-      <Hero myProjectsRef={myProjectsRef} />
-      <AboutMe aboutMeRef={aboutMeRef} />
-      <MySkills mySkillsRef={mySkillsRef} />
-      <MyProjects myProjectsRef={myProjectsRef} />
+      <Hero ref={myProjectsRef} />
+      <AboutMe ref={aboutMeRef} />
+      <MySkills ref={mySkillsRef} />
+      <MyProjects ref={myProjectsRef} />
     </>
   );
 };

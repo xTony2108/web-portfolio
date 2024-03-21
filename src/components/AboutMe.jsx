@@ -1,8 +1,9 @@
+import { forwardRef } from "react";
 import cv from "../assets/images/Alampi_Antonino_CV.pdf";
 
-export const AboutMe = ({ aboutMeRef }) => {
+export const AboutMe = forwardRef((_, ref) => {
   return (
-    <div className="bg-[#101118] px-5 py-heroLg 2xl:py-heroXl" ref={aboutMeRef}>
+    <div className="bg-[#101118] px-5 py-heroLg 2xl:py-heroXl" ref={ref}>
       <h2 className="text-white text-center font-black text-3xl lg:text-5xl xl:text-6xl">
         Chi sono
       </h2>
@@ -47,4 +48,4 @@ export const AboutMe = ({ aboutMeRef }) => {
       </div>
     </div>
   );
-};
+});
