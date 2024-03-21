@@ -1,9 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { SkillCard } from "./SkillCard";
+import { forwardRef } from "react";
 
-export const MySkills = ({ mySkillsRef }) => {
-  const ref = mySkillsRef;
-
+export const MySkills = forwardRef((_, ref) => {
   return (
     <div className="bg-[#F4E2C9] py-heroLg 2xl:py-heroXl" ref={ref}>
       <div className=" flex items-center justify-center gap-4">
@@ -17,7 +16,7 @@ export const MySkills = ({ mySkillsRef }) => {
         />
       </div>
       <div className="sm:m-auto max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
-        <div className="flex px-5 pb-4 gap-6 sm:justify-center sm:flex-wrap overflow-auto pt-24 sm:pb-0 sm:gap-3 lg:gap-6">
+        <div className="flex px-5 gap-6 sm:justify-center sm:flex-wrap overflow-x-auto hideScrollbar scroll pt-24 sm:gap-3 lg:gap-6">
           <SkillCard iconName={"HTML"} icon={"fa-brands fa-html5"} />
           <SkillCard iconName={"CSS"} icon={"fa-brands fa-css3"} />
           <SkillCard iconName={"SASS"} icon={"fa-brands fa-sass"} />
@@ -44,4 +43,4 @@ export const MySkills = ({ mySkillsRef }) => {
       </div>
     </div>
   );
-};
+});

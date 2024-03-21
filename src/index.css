@@ -46,7 +46,7 @@
 
   .custom-shape-divider-bottom-1703247122 {
     position: absolute;
-    bottom: -1px;
+    bottom: -2px;
     left: 0;
     width: 100%;
     overflow: hidden;
@@ -62,6 +62,13 @@
 
   .custom-shape-divider-bottom-1703247122 .shape-fill {
     fill: #101118;
+  }
+  .hideScrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .hideScrollbar::-webkit-scrollbar {
+    display: none;
   }
 
   @media (max-height: 580px) {
