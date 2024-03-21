@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "./Swiper";
+import { forwardRef } from "react";
 
-export const MyProjects = ({ myProjectsRef }) => {
+export const MyProjects = forwardRef((_, ref) => {
   return (
     <>
-      <div className="py-heroLg 2xl:py-heroXl px-5" ref={myProjectsRef}>
+      <div className="py-heroLg 2xl:py-heroXl px-5" ref={ref}>
         <div className="m-auto max-w-screen-sm lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <div className="flex justify-around items-center">
             <button className="prev disabled:opacity-30">
@@ -30,4 +31,4 @@ export const MyProjects = ({ myProjectsRef }) => {
       </div>
     </>
   );
-};
+});

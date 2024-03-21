@@ -1,17 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { forwardRef, useEffect, useRef, useState } from "react";
 import foto from "../assets/images/foto.png";
 import { clsx } from "clsx";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export const Hero = ({ myProjectsRef }) => {
+export const Hero = forwardRef((_, ref) => {
   const [writer, setWriter] = useState("");
   const [count, setCount] = useState(0);
   const [isIntersecting, setIsIntersecting] = useState(false);
-
   const heroRef = useRef();
-
-  const myProjects = myProjectsRef;
-
+  const myProjects = ref;
   const text = `Sono un junior full stack developer. Esplora il mio portfolio per vedere cosa posso fare e come ho affrontato sfide uniche nel mondo dello sviluppo web.`;
 
   const maxLength = text.length;
@@ -54,7 +51,7 @@ export const Hero = ({ myProjectsRef }) => {
   return (
     <>
       <header className="relative" ref={heroRef}>
-        <div className="px-5 m-auto pb-20 pt-[90px] min-h-[calc(100svh-50px)] tallmd:flex tallmd:flex-col sm:min-h-[calc(100svh-58px)] md:min-h-[calc(100svh-58px)] max-w-screen-sm sm:pb-40 sm:flex sm:items-center sm:justify-center sm:pt-[138px] md:max-w-screen-md xl:py-heroXl lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+        <div className="px-5 m-auto pb-20 pt-[90px] tallmd:flex tallmd:flex-col sm:min-h-fit md:min-h-fit max-w-screen-sm sm:pb-40 sm:flex sm:items-center sm:justify-center sm:pt-[138px] md:max-w-screen-md xl:py-heroXl lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
           <div className="flex flex-col justify-center tallmd:flex-1 tallmd:flex-col sm:flex-row sm:flex-1">
             <div className="flex-1 w-full tallmd:flex tallmd:flex-col tallmd:justify-center">
               <div className="w-full">
@@ -73,7 +70,9 @@ export const Hero = ({ myProjectsRef }) => {
                 <button
                   onClick={() =>
                     myProjects &&
-                    myProjects?.current?.scrollIntoView({ behavior: "smooth" })
+                    myProjects?.current?.scrollIntoView({
+                      behavior: "smooth",
+                    })
                   }
                   className="bg-[#6A0DAD] text-white min-w-32 h-9 rounded-2xl font-semibold shadow-lg self-start"
                 >
@@ -108,8 +107,8 @@ export const Hero = ({ myProjectsRef }) => {
                 </a>
               </div>
             </div>
-            <div className="flex-1 flex justify-center items-center mt-10 sm:mt-0 tallmd:mt-10">
-              <div className="tallsm:w-1/2 tallsm:h-auto tallsm:aspect-square tallmd:w-[60%] tallmd:h-auto tallmd:aspect-square tall:w-52 tall:h-52 w-48 h-48 p-4 relative z-20 imgBorder overflow-hidden flex items-center justify-center rounded-full xl:w-96 xl:h-96 lg:w-72 lg:h-72 sm:w-56 sm:h-56">
+            <div className="flex justify-center items-center mt-10 sm:mt-0 tallmd:mt-10">
+              <div className="tallsm:w-1/2 tallsm:h-auto tallsm:aspect-square tallmd:h-auto tallmd:aspect-square tall:w-52 tall:h-52 w-48 h-48 p-4 relative z-20 imgBorder overflow-hidden flex items-center justify-center rounded-full xl:w-96 xl:h-96 lg:w-72 lg:h-72 sm:w-56 sm:h-56">
                 <img
                   src={foto}
                   className="w-full h-full rounded-full relative z-20"
@@ -154,4 +153,4 @@ export const Hero = ({ myProjectsRef }) => {
       </header>
     </>
   );
-};
+});
